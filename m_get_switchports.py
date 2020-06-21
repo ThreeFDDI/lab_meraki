@@ -18,8 +18,9 @@ response = dashboard.switch_ports.getDeviceSwitchPortStatuses(
     serial
 )
 
+print("Connected ports:")
+
 for port in response:
-    print("Connected ports:")
     if port["status"] == "Connected":
         pprint(port['portId'])
     
