@@ -13,16 +13,16 @@ dashboard = meraki.DashboardAPI(
     )
 
 serial = 'Q2HP-Q9S8-BVHB'
+number = '7'
 
-response = dashboard.switch_ports.getDeviceSwitchPortStatuses(
-    serial
+response = dashboard.switch_ports.updateDeviceSwitchPort(
+    serial, number, 
+    name='My switch port', 
+    tags='tag1 tag2', 
+    enabled=True, 
+    type='access', 
+    vlan=666, 
+    voiceVlan=20, 
 )
 
-print("Connected ports:")
-
-for port in response:
-    if port['portId'] == '7':
-        pprint(port)
-    #if port["status"] == "Connected":
-    #    pprint(port['portId'])
-    
+print(response)
