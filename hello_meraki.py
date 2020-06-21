@@ -7,4 +7,3 @@ response = requests.get(
 )
 
 pprint(response.json())
-
