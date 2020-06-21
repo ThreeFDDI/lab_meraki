@@ -13,4 +13,8 @@ network_id = "L_646829496481105500"
 
 response = dashboard.networks.getNetwork(network_id)
 
-pprint(response)
+#pprint(response)
+
+response = dashboard.devices.getNetworkDevices(network_id)
+
+#pprint(response)
